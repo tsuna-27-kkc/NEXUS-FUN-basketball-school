@@ -1,0 +1,922 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #25251B;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul {
+  text-decoration: none;
+}
+
+a {
+  color: #25251B;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  /* ネイビー */
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f97316;
+  /* オレンジ差し色 */
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.section-title .highlight {
+  color: #ff8a1f;
+}
+
+/* ヘッダー */
+header,
+footer {
+  background-color: #2471D7;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+h1 img {
+  width: 140px;
+}
+
+header .logo a {
+  display: block;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li a {
+  padding-right: 20px;
+  color: #F8FAFF;
+}
+
+/* SNSリンク */
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-links a {
+  color: #D9D9D9;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+  color: #ff8a1f;
+}
+
+
+/* メイン */
+.mainvisual img {
+  object-fit: cover;
+  position: relative;
+  height: calc(100vh - 87px);
+}
+
+.site-title {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  z-index: 10;
+  color: #fff;
+  font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* タイトル全体 */
+.site-title h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  background: rgba(0, 53, 128, 0.6);
+  /* 半透明のネイビー帯で文字を浮かせる */
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+/* 強調部分（上段） */
+.site-title .highlight {
+  color: #ffb347;
+  /* 明るいオレンジでアクセント */
+  text-transform: uppercase;
+}
+
+/* 目立つオレンジのボタン（トップ右に配置する想定） */
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  background: linear-gradient(180deg, #ff8a1f, #ff7a00);
+  color: #F8FAFF;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  transition: transform .08s ease, box-shadow .12s ease;
+  border: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.apply-btn:focus {
+  outline: 3px solid rgba(0, 90, 200, 0.12);
+  outline-offset: 2px;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+}
+
+.apply-btn .label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.apply-btn .label:hover {
+  color: #2471D7;
+}
+
+.apply-btn .badge {
+  background: #2471D7;
+  /* ネイビー */
+  color: #F8FAFF;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* トップバー右に固定表示する例 */
+.apply-wrapper {
+  position: absolute;
+  /* header内に置くなら relative header に合わせて調整 */
+  right: 18px;
+  top: 100px;
+  z-index: 60;
+}
+
+/* intro */
+.section-intro,
+.section-strengths,
+.message {
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-block: 100px;
+}
+
+.intro-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-intro .intro-img img {
+  width: 470px;
+}
+
+.intro-right {
+  position: relative;
+}
+
+.btn-elementary {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.btn-toddler {
+  position: absolute;
+  top: 160px;
+  border: 1px solid;
+  padding: 10px 20px;
+  left: 145px;
+}
+
+.section-intro .intro-text p {
+  background-color: #ff8a1f;
+  padding: 20px 30px;
+  line-height: 2;
+}
+
+.btn-elementary,
+.btn-toddler {
+  display: inline-block;
+  position: relative;
+  color: #2471D7;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  padding-right: 20px;
+  /* 矢印分の余白 */
+  transition: all 0.2s ease;
+}
+
+.btn-elementary::after,
+.btn-toddler::after {
+  content: "▷";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff7a00;
+  /* オレンジでアクセント */
+  font-size: 0.9em;
+  transition: transform 0.2s ease;
+}
+
+.btn-elementary:hover,
+.btn-toddler:hover {
+  color: #ff7a00;
+}
+
+.btn-elementary:hover::after,
+.btn-toddler:hover::after {
+  transform: translate(3px, -50%);
+  /* 右に少し動く */
+}
+
+/* strengths */
+.section-strengths,
+.message {
+  background-color: #D9D9D9;
+}
+
+.strengths-list:last-child {
+  margin-top: 20px;
+}
+
+.strength-right img {
+  width: 180px;
+}
+
+.strength-title {
+  display: flex;
+  align-items: center;
+}
+
+.strength-num {
+  display: inline-block;
+  background-color: #ff8a1f;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #F8FAFF;
+  margin-right: 10px;
+}
+
+.strength-heading {
+  color: #2471D7;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.strengths-list,
+.location ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.strength-text {
+  padding: 10px 0 0 60px;
+  line-height: 30px;
+  width: 825px;
+}
+
+.btn-area {
+  text-align: center;
+  /* 中央寄せ */
+  margin-top: 100px;
+  /* 上に余白を追加（必要に応じて） */
+}
+
+.btn-reserve {
+  display: inline-block;
+  background-color: #2471D7;
+  color: #F8FAFF;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 24px 48px 24px 32px;
+  /* 右に余白を多めにして▶スペース確保 */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-reserve span {
+  color: #ff8a1f;
+  /* オレンジ強調 */
+}
+
+.btn-reserve::after {
+  content: "▶";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+}
+
+.btn-reserve:hover {
+  background-color: #ff8a1f;
+  color: #F8FAFF;
+}
+
+.btn-reserve:hover span {
+  color: #F8FAFF;
+}
+
+/* location*/
+.location {
+  padding: 0 50px 50px 50px;
+}
+
+.location-left img {
+  width: 310px;
+}
+
+.location li p {
+  width: 500px;
+  line-height: 2;
+}
+
+/* gallery */
+.gallery ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.gallery li img {
+  width: 250px;
+}
+
+/* message */
+.message-text p {
+  line-height: 2;
+}
+
+.message-text p:last-child {
+  margin-top: 10px;
+}
+
+/* footer */
+footer {
+  position: relative;
+}
+
+.site-footer {
+  background-color: #1e73d8;
+  /* 青 */
+  color: #D9D9D9;
+  padding: 10px 40px;
+}
+
+/* 中身のレイアウト */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ロゴ部分 */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+footer .apply-wrapper {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+footer p {
+  color: #F8FAFF;
+  margin: 0 auto;
+  font-size: 0.7rem;
+}
+
+/* クラス紹介 詳細ページ */
+.class-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.class-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+}
+
+/* 見出し帯 */
+.class-title {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.class-title.blue {
+  background-color: #2471D7;
+}
+
+.class-title.orange {
+  background-color: #ff8a1f;
+}
+
+/* 本文 */
+.class-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.class-text h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.class-text ol {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* 吹き出し風のコメント */
+.class-comment {
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  width: fit-content;
+}
+
+.blue-box {
+  background-color: #e6f0ff;
+  color: #2471D7;
+}
+
+.orange-box {
+  background-color: #f8e7d8;
+  color: #ff8a1f;
+}
+
+/* 無料体験セクション */
+.trial-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #e0e0e0;
+}
+
+.trial-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trial-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f7941e;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.trial-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* ボタン */
+.trial-btn {
+  display: inline-block;
+  background-color: #1e60c2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.trial-btn:hover {
+  background-color: #174a99;
+}
+
+/* 無料体験から入会後の流れ */
+.flow-section {
+  background-color: #f8f9fc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.flow-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flow-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.flow-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f97316;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+/* 各ステップ */
+.flow-step {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* ①とタイトルを横並びに */
+.flow-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.flow-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f97316;
+}
+
+.flow-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.flow-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.flow-steps-detail {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.flow-steps-detail p {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+}
+
+.flow-steps-detail ol {
+  list-style-position: inside;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.flow-email {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.flow-btn-area {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.flow-btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.flow-btn:hover {
+  background-color: #1e40af;
+}
+
+
+/* スクール概要 */
+.school-info {
+  background-color: #f9fafb;
+  padding: 80px 20px;
+}
+
+.school-info-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.school-info-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  /* 濃い青 */
+  margin-bottom: 40px;
+}
+
+/* --- 表デザイン --- */
+.school-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.school-table th,
+.school-table td {
+  border: 1px solid #d1d5db;
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.school-table th {
+  background-color: #f3f4f6;
+  width: 30%;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.school-table td {
+  color: #374151;
+}
+
+
+/* お問い合わせ 詳細ページ */
+.contact-section {
+  background-color: #f9fafb;
+  padding: 80px 20px;
+}
+
+.contact-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.contact-desc {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+/* --- フォーム --- */
+.contact-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.form-group label span {
+  font-size: 0.9rem;
+  color: #f97316;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+/* --- 送信ボタン --- */
+.contact-btn {
+  display: block;
+  width: 100%;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* --- 注意書き --- */
+.contact-note {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+
+  header,
+  main,
+  footer {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* レスポンシブ対応（スマホ） シートタイトル */
+@media (max-width: 600px) {
+  .main-title h1 {
+    font-size: 1.8rem;
+    padding: 8px 12px;
+  }
+}
+
+
+
+
+/* スマホ対応 */
+/* @media (max-width: 600px) { */
+/* .class-section { */
+/* padding: 20px; */
+/* } */
+
+/* .class-title { */
+/* font-size: 1.3rem; */
+/* } */
+
+/* .class-comment { */
+/* font-size: 0.9rem; */
+/* } */
+/* } */
+
+/* スマホ対応  無料体験 */
+/* @media (max-width: 600px) { */
+/* .trial-title { */
+/* font-size: 1.5rem; */
+/* } */
+
+/* .trial-text { */
+/* font-size: 0.95rem; */
+/* } */
+
+/* .trial-btn { */
+/* font-size: 0.95rem; */
+/* padding: 12px 30px; */
+/* } */
+/* } */
+
+/* モバイルで少しサイズ調整 */
+/* @media (max-width:600px) { */
+/* .apply-btn { */
+/* padding: 10px 12px; */
+/* gap: 8px; */
+/* } */
+
+/* .apply-btn .label {
+    font-size: 13px;
+  }
+
+  .apply-wrapper {
+    right: 12px;
+    top: 12px;
+  }
+}
+
+/* --- スマホ対応　スクール概要 --- */
+/* @media (max-width: 600px) { */
+
+/* .school-table th, */
+/* .school-table td { */
+/* display: block; */
+/* width: 100%; */
+/* } */
+
+/* .school-table tr { */
+/* margin-bottom: 12px; */
+/* display: block; */
+/* border: 1px solid #e5e7eb; */
+/* border-radius: 6px; */
+/* overflow: hidden; */
+/* } */
+
+/* .school-table th { */
+/* background-color: #2563eb; */
+/* color: #fff; */
+/* padding: 10px 14px; */
+/* } */
+
+/* .school-table td { */
+/* background-color: #fff; */
+/* padding: 12px 14px; */
+/* } */
+/* }  */
