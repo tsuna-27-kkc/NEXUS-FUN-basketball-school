@@ -119,17 +119,15 @@ header li a {
   z-index: 10;
   color: #fff;
   font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 14px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* タイトル全体 */
 .site-title h1 {
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 800;
   line-height: 1.2;
   margin: 0;
-  background: rgba(0, 53, 128, 0.6);
-  /* 半透明のネイビー帯で文字を浮かせる */
   display: inline-block;
   padding: 20px 30px;
   border-radius: 8px;
@@ -919,4 +917,5 @@ footer p {
 /* background-color: #fff; */
 /* padding: 12px 14px; */
 /* } */
+
 /* }  */
