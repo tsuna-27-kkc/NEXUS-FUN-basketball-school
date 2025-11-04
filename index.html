@@ -12,13 +12,26 @@
 </head>
 
 <body>
-    <header>
-        <h1><a href="index.html"><img src="img/logo.png" alt="NEXUS FUN basketball school"></a></h1>
-        <nav class="social-links">
-            <a href="class.html">クラス紹介</a>
-            <a href="flow.html">入会の流れ</a>
-            <a href="school.html">スクール概要</a>
-            <a href="contact.html">お問い合わせ</a>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="NEXUS FUN basketball school"></a>
+        </div>
+
+        <!-- ハンバーガーボタン -->
+        <div class="menu-btn" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- ナビゲーション -->
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="class.html">クラス紹介</a></li>
+                <li><a href="flow.html">入会の流れ</a></li>
+                <li><a href="school.html">スクール概要</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -46,7 +59,7 @@
         <div class="container">
             <section class="section-intro">
                 <h3 class=" section-title">
-                    NEXUS FUN basketball school で
+                    NEXUS FUN basketball school で<br>
                     <span class="highlight">楽しく運動</span>しませんか？
                 </h3>
                 <div class="intro-inner">
@@ -56,17 +69,18 @@
                     <div class="intro-right">
                         <div class="intro-text">
                             <p>
-                                愛知県○○市で、バスケットスクールを行っている、NEXUS<br>
-                                FUN Basketball schoolです。スキルの向上だけでなく、たく<br>
-                                さんの子供たちとのつがり（NEXUS）や、バスケットボールを<br>
-                                楽しむ（FUN）ことを大切にしているスクールです!<br>
-                                上手になりたいお子さまももちろん、スポーツ経験がないお子さ<br>
-                                まや、運動苦手のお子さまでも安心して始めることができます！<br>
+                                愛知県○○市で、バスケットスクールを行っている、NEXUS
+                                FUN Basketball schoolです。スキルの向上だけでなく、たく
+                                さんの子供たちとのつがり（NEXUS）や、バスケットボールを
+                                楽しむ（FUN）ことを大切にしているスクールです!
+                                上手になりたいお子さまももちろん、スポーツ経験がないお子さ
+                                まや、運動苦手のお子さまでも安心して始めることができます！
+                                <br>
                                 ますは無料体験にご参加ください！
                             </p>
+                            <a href="class.html" class="btn-elementary">小学生クラス</a>
+                            <a href="class.html#toddler-class" class="btn-toddler">楽しく体を動かす幼児クラス</a>
                         </div>
-                        <a href="class.html" class="btn-elementary">小学生クラス</a>
-                        <a href="class.html" class="btn-toddler">楽しく体を動かす幼児クラス</a>
                     </div>
                 </div>
             </section>
@@ -86,8 +100,8 @@
                                 <li class="strength-heading">経験豊富な指導者による安心のサポート</li>
                             </ul>
                             <p class="strength-text">
-                                元・中学校体育教師で、プロバスケットボールチームのマネージャー経験を持つコーチが指導！<br>
-                                子どもの発達段階を熟知しているから、「安全で、心も体も育つ」環境を大切にしています。<br>
+                                元・中学校体育教師で、プロバスケットボールチームのマネージャー経験を持つコーチが指導！
+                                子どもの発達段階を熟知しているから、「安全で、心も体も育つ」環境を大切にしています。
                                 バスケの技術だけでなく、礼儀・チームワーク・思いやりといった「人としての成長」もサポートします。
                             </p>
                         </div>
@@ -147,7 +161,7 @@
 
             <section class="message">
                 <h3 class="section-title">代表挨拶</h3>
-                <div class="messege-text">
+                <div class="message-text">
                     <p>NEXUS FUN Basketball School 代表の〇〇です。<br>
                         私はこれまで、中学校の体育教師として子どもたちと向き合い、またプロバスケットボールチームのマネージャーとして、選手や指導者のサポートに
                         携わってきました。<br>
@@ -164,7 +178,9 @@
         </div>
     </main>
     <footer>
-        <h1><a href="#"><img src="img/logo.png" alt="NEXUS FUN basketball school"></a></h1>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="NEXUS FUN basketball school"></a>
+        </div>
         <nav class="social-links">
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://x.com/?lang=ja" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -179,5 +195,28 @@
 
 
 </body>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('nav');
+
+    // オーバーレイ作成（クリックで閉じる用）
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    document.body.appendChild(overlay);
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+</script>
+
 
 </html>
