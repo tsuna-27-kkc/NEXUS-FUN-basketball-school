@@ -118,5 +118,28 @@
         <p>&copy; 2025 NEXUS FUN Basketball School</p>
     </footer>
 </body>
+    <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('nav');
+
+    // オーバーレイ作成（クリックで閉じる用）
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    document.body.appendChild(overlay);
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+</script>
+
 
 </html>
+
