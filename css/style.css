@@ -23,7 +23,6 @@ a {
   color: #25251B;
   text-decoration: none;
   display: block;
-
 }
 
 .container {
@@ -35,9 +34,8 @@ a {
 .section-title {
   font-size: 3rem;
   color: #1e3a8a;
-  /* ネイビー */
   margin-bottom: 40px;
-  /* position: relative; */
+  position: relative;
   text-align: center;
 }
 
@@ -47,7 +45,6 @@ a {
   width: 60px;
   height: 4px;
   background-color: #f97316;
-  /* オレンジ差し色 */
   margin: 16px auto 0;
   border-radius: 2px;
 }
@@ -134,7 +131,7 @@ footer {
 .site-title {
   position: absolute;
   bottom: 5%;
-  left: 10%;
+  left: 5%;
   z-index: 10;
   color: #fff;
   font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
@@ -142,7 +139,8 @@ footer {
 }
 
 /* タイトル全体 */
-.site-title h1 {
+.site-title h1,
+.site-title .highlight {
   font-size: clamp(1.6rem, 6vw, 7rem);
   font-weight: 800;
   display: inline-block;
