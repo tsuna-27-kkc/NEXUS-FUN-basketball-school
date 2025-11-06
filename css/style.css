@@ -910,10 +910,6 @@ footer p {
   }
 
   /* メイン */
-  .site-title h1 {
-    /* font-size: 4rem; */
-  }
-
   .intro-inner {
     flex-direction: column;
   }
@@ -1011,10 +1007,6 @@ footer p {
   @media (max-width: 380px) {
     .section-title {
       font-size: 1rem;
-    }
-
-    .site-title h1 {
-      /* font-size: 2rem; */
     }
 
     .strength-num {
