@@ -32,11 +32,13 @@ a {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  /* 画面幅に合わせて 1.8rem〜3rem の範囲で自動調整 */
   color: #1e3a8a;
   margin-bottom: 40px;
   position: relative;
   text-align: center;
+  line-height: 1.4;
 }
 
 .section-title::after {
@@ -120,12 +122,20 @@ footer {
   color: #ff8a1f;
 }
 
-
 /* メイン */
+.mainvisual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* 比率を指定（16:9など） */
+  overflow: hidden;
+  position: relative;
+}
+
 .mainvisual img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
-  height: calc(100vh - 87px);
 }
 
 .site-title {
@@ -208,7 +218,7 @@ footer {
   position: absolute;
   /* header内に置くなら relative header に合わせて調整 */
   right: 18px;
-  top: 100px;
+  top: 3%;
   z-index: 60;
 }
 
@@ -355,34 +365,37 @@ footer {
 
 .btn-area {
   text-align: center;
-  /* 中央寄せ */
-  margin-top: 100px;
-  /* 上に余白を追加（必要に応じて） */
+  margin-top: 80px;
 }
 
+/* 通常サイズ */
 .btn-reserve {
   display: inline-block;
   background-color: #2471D7;
   color: #F8FAFF;
   font-weight: 700;
   text-decoration: none;
-  padding: 24px 48px 24px 32px;
-  /* 右に余白を多めにして▶スペース確保 */
+  font-size: 1.2rem;
+  /* 相対単位で調整しやすく */
+  padding: 1.2em 2.5em 1.2em 2em;
+  /* px → emに変更 */
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  width: auto;
+  max-width: 90%;
+  /* 画面幅に収まるよう制限 */
 }
 
 .btn-reserve span {
   color: #ff8a1f;
-  /* オレンジ強調 */
 }
 
 .btn-reserve::after {
   content: "▶";
   position: absolute;
-  right: 20px;
+  right: 1em;
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.9rem;
@@ -835,10 +848,6 @@ footer p {
 }
 
 @media (max-width: 900px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
   .menu-btn {
     display: flex;
   }
@@ -971,13 +980,11 @@ footer p {
     width: 91%;
   }
 
-  .btn-area {
-    text-align: center;
-    margin-top: 50px;
-  }
-
   .btn-reserve {
-    width: 360px;
+    font-size: 1rem;
+    padding: 1.9em 2em;
+    border-radius: 4px;
+    width: 70%;
   }
 
   .location,
@@ -1004,35 +1011,10 @@ footer p {
     gap: 0px;
   }
 
-  @media (max-width: 380px) {
-    .section-title {
-      font-size: 1rem;
-    }
-
-    .strength-num {
-      width: 12%;
-    }
-
-    .strength-num {
-      width: 13%;
-    }
-
-    .strength-heading {
-      font-size: 0.9rem;
-    }
-
-    .btn-reserve {
-      width: 270px;
-      font-size: 0.8rem;
-      padding: 14px 7px 14px 7px;
-    }
-
-    .btn-reserve span {
-      font-size: 0.8rem;
-    }
-
-    .btn-reserve::after {
-      right: 30px;
+  @media (max-width: 600px) {
+    .section-title::after {
+      width: 40px;
+      /* 装飾ラインも少し短く */
     }
   }
 }
