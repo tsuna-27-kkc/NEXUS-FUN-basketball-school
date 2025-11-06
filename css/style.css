@@ -912,6 +912,10 @@ footer p {
   }
 
   /* メイン */
+  .site-title h1 {
+    font-size: 4rem;
+  }
+
   .intro-inner {
     flex-direction: column;
   }
@@ -1004,5 +1008,41 @@ footer p {
   .social-links {
     flex-direction: column;
     gap: 0px;
+  }
+
+  @media (max-width: 380px) {
+    .section-title {
+      font-size: 1rem;
+    }
+
+    .site-title h1 {
+      font-size: 2rem;
+    }
+
+    .strength-num {
+      width: 12%;
+    }
+
+    .strength-num {
+      width: 13%;
+    }
+
+    .strength-heading {
+      font-size: 0.9rem;
+    }
+
+    .btn-reserve {
+      width: 270px;
+      font-size: 0.8rem;
+      padding: 14px 7px 14px 7px;
+    }
+
+    .btn-reserve span {
+      font-size: 0.8rem;
+    }
+
+    .btn-reserve::after {
+      right: 30px;
+    }
   }
 }
