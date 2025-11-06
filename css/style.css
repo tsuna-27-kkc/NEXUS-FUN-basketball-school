@@ -33,7 +33,7 @@ a {
 }
 
 .section-title {
-  font-size: 3vw;
+  font-size: 3rem;
   color: #1e3a8a;
   /* ネイビー */
   margin-bottom: 40px;
@@ -1006,3 +1006,4 @@ footer p {
     gap: 0px;
   }
 }
+
