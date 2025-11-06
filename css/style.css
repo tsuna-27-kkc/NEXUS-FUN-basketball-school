@@ -32,8 +32,7 @@ a {
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  /* 画面幅に合わせて 1.8rem〜3rem の範囲で自動調整 */
+  font-size: clamp(1.4rem, 4vw, 3rem);
   color: #1e3a8a;
   margin-bottom: 40px;
   position: relative;
