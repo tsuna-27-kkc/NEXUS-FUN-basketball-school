@@ -841,6 +841,10 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
   .menu-btn {
     display: flex;
   }
@@ -1006,4 +1010,5 @@ footer p {
     gap: 0px;
   }
 }
+
 
