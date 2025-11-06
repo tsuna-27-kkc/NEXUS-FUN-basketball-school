@@ -916,6 +916,10 @@ footer p {
   }
 
   /* メイン */
+  .site-title h1 {
+   font-size: 6rem;
+  }
+  
   .intro-inner {
     flex-direction: column;
   }
@@ -1010,6 +1014,7 @@ footer p {
     gap: 0px;
   }
 }
+
 
 
 
