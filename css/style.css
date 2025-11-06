@@ -143,9 +143,9 @@ footer {
 
 /* タイトル全体 */
 .site-title h1 {
-  font-size: 6rem;
+  font-size: clamp(1.6rem, 6vw, 7rem);
   font-weight: 800;
-  /* display: inline-block; */
+  display: inline-block;
 }
 
 /* 強調部分（上段） */
@@ -913,7 +913,7 @@ footer p {
 
   /* メイン */
   .site-title h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
 
   .intro-inner {
@@ -1016,7 +1016,7 @@ footer p {
     }
 
     .site-title h1 {
-      font-size: 2rem;
+      /* font-size: 2rem; */
     }
 
     .strength-num {
