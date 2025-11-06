@@ -143,7 +143,7 @@ footer {
 
 /* タイトル全体 */
 .site-title h1 {
-  font-size: 6vw;
+  font-size: 6rem;
   font-weight: 800;
   /* display: inline-block; */
 }
@@ -1010,5 +1010,6 @@ footer p {
     gap: 0px;
   }
 }
+
 
 
