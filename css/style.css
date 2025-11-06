@@ -32,7 +32,7 @@ a {
 }
 
 .section-title {
-  font-size: clamp(1.4rem, 4vw, 3rem);
+  font-size: clamp(1rem, 4vw, 3rem);
   color: #1e3a8a;
   margin-bottom: 40px;
   position: relative;
@@ -333,16 +333,16 @@ footer {
 .strength-title {
   display: flex;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .strength-num {
   display: inline-block;
   background-color: #ff8a1f;
-  padding: 1% 2%;
+  padding: 10px;
   font-size: 1.5rem;
   color: #F8FAFF;
-  margin-right: 1%;
+  margin-right: 10px;
 }
 
 .strength-heading {
@@ -967,10 +967,6 @@ footer p {
     width: 100%;
   }
 
-  .strength-num {
-    width: 9%;
-  }
-
   .strength-right {
     margin: 0 auto;
   }
@@ -1015,5 +1011,20 @@ footer p {
       width: 40px;
       /* 装飾ラインも少し短く */
     }
+
+    .apply-wrapper {
+      right: -222px;
+    }
+
+    .btn-reserve {
+      font-size: 0.7rem;
+      padding: 1.9em 2em;
+      border-radius: 4px;
+      width: 50%;
+    }
+
+    .class-title {
+      font-size: 1.2rem;
+    }
   }
-}
+  }
