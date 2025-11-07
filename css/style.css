@@ -944,7 +944,9 @@ footer p {
   }
 
   .section-intro .intro-text p {
+    font-size: 0.9rem;
     margin-top: 30px;
+
   }
 
   .btn-elementary {
@@ -966,6 +968,12 @@ footer p {
 
   .strength-left {
     width: 100%;
+  }
+
+  .strength-text,
+  .location li p,
+  .message-text p {
+    font-size: 0.9rem;
   }
 
   .strength-right {
