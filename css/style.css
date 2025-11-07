@@ -743,9 +743,10 @@ footer p {
 
 .school-table th {
   background-color: #f3f4f6;
-  width: 30%;
+  width: 40%;
   color: #1e293b;
   font-weight: 600;
+  text-align: center;
 }
 
 .school-table td {
@@ -971,15 +972,11 @@ footer p {
     margin: 0 auto;
   }
 
-  .strength-heading {
-    width: 91%;
-  }
-
   .btn-reserve {
     font-size: 1rem;
     padding: 1.9em 2em;
     border-radius: 4px;
-    width: 70%;
+    width: 50%;
   }
 
   .location,
@@ -1019,12 +1016,47 @@ footer p {
     .btn-reserve {
       font-size: 0.7rem;
       padding: 1.9em 2em;
-      border-radius: 4px;
-      width: 50%;
+      width: 60%;
     }
 
-    .class-title {
-      font-size: 1.2rem;
+    .class-title,
+    .flow-number,
+    .flow-text {
+      font-size: 1.1rem;
+    }
+
+    .class-text h3 {
+      font-size: 1rem;
+    }
+
+    .class-text ol,
+    .class-comment,
+    .trial-text {
+      font-size: 0.9rem;
+    }
+
+    .flow-desc,
+    .flow-steps-detail ol {
+      font-size: 0.9rem;
+    }
+
+    .contact-desc {
+      font-size: 0.9rem;
+    }
+
+    .contact-note {
+      font-size: 0.7rem;
+    }
+
+    @media (max-width: 430px) {
+      .btn-reserve {
+        width: 70%;
+      }
+
+      .school-table th,
+      .school-table td {
+        font-size: 0.9rem;
+      }
     }
   }
-  }
+}
